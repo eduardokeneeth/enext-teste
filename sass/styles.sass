@@ -1,0 +1,80 @@
+@import '_variables.sass'
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans)
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700)
+
+html
+  font-size: 10px
+  @media(max-width: 991px)
+    font-size: 9px
+
+body
+  font-family: 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif
+
+//FLEX
+@mixin display-flex()
+  display: webkit-flex
+  display: flex
+
+@mixin align-items($property)
+  -webkit-align-items: $property
+  align-items: $property
+
+@mixin justify-content($property)
+  -webkit-justify-content: $property
+  justify-content: $property
+
+//
+// HEADER
+//
+header
+  padding: 30px 0
+  //FLEX
+  .mp-flex
+    @include display-flex()
+    @include align-items(center)
+  // LOGO
+  .mp-logo
+    h1
+      width: 238px
+      height: 53px
+      margin: 0
+      background-image: url("#{$url-img}logo.jpg")
+      text-indent: -9999px
+  //FORM
+  form
+    .input-group-btn
+      position: relative
+      font-size: 0
+      white-space: nowrap
+    input, button
+      height: 40px
+      border: 1px solid $secundary-color
+    button
+      padding: 0 10px
+      font-size: 14px
+      background: transparent
+      border-right: none
+      border-radius: 5px 0 0 5px
+    input
+      width: 70%
+      border-left: none
+      border-radius: 0 5px 5px 0
+  //FREE SHIPPING
+  .mp-free
+    color: $primary-color
+    font-style: italic
+    span
+      display: block
+      font-family: "Oswald"
+      font-size: 2rem
+  //BAG
+  .mp-bag
+    color: #b3b3b3
+    font-size: 1.5rem
+    text-align: center
+    text-transform: uppercase
+    .bag-qtde
+      color: $primary-color
+      font-weight: 700
+    img
+      margin-right: 10px
