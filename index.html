@@ -13,9 +13,9 @@
 </head>
 
 <body>
-  <div class="container">
-    <!-- HEADER -->
-    <header>
+  <!-- HEADER -->
+  <header>
+    <div class="container">
       <div class="row">
         <div class="mp-flex">
           <div class="col-lg-3 col-md-4">
@@ -42,30 +42,38 @@
             <img src="img/icon-bag.jpg">
             <span>Bag: <span class="bag-qtde">1</span></span>
           </div>
-        </div>
-      </div>
-    </header>
+        </div><!-- /.mp-flex -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </header>
 
-    <!-- MENU -->
-    <div class="row">
-      <div class="col-md-12">
-        <nav class="mp-menu">
-          <ul>
-            <li><a href="#" title="Potions">Potions</a></li>
-            <li><a href="#" title="Ingredients">Ingredients</a></li>
-            <li><a href="#" title="Books">Books</a></li>
-            <li><a href="#" title="Supplies">Supplies</a></li>
-            <li><a href="#" title="Charms">Charms</a></li>
-            <li><a href="#" title="Clearence!">Clearence!</a></li>
-          </ul>
-          <span class="mp-sign">
-            Sign In or Sign Up
-          </span>
+  <!-- MENU -->
+  <div class="mp-menu">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          <nav>
+            <ul>
+              <li><a href="#" title="Potions">Potions</a></li>
+              <li><a href="#" title="Ingredients">Ingredients</a></li>
+              <li><a href="#" title="Books">Books</a></li>
+              <li><a href="#" title="Supplies">Supplies</a></li>
+              <li><a href="#" title="Charms">Charms</a></li>
+              <li><a href="#" title="Clearence!">Clearence!</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <span class="mp-sign">
+              <a href="#" title="Sign In">Sign In</a> or <a href="#" title="Sign Up">Sign Up</a>
+            </span>
+          </div>
         </nav>        
       </div>
     </div>
+  </div><!-- /.mp-menu -->
 
-    <!-- POTIONS -->
+  <!-- POTIONS -->
+  <div class="container">
     <div class="row">
       <div class="col-md-12">
         <h2>Potions</h2>
@@ -95,43 +103,44 @@
         <h3>Aging Potion - <span class="value">$29.99</span></h3>
       </div>
     </div>
+  </div>
 
-    <!-- FOOTER -->
-    <footer>
-      <div class="col-md-6">
-        <nav clas="mp-menu-footer">
-          <ul><li><a href="#" title="Company">Company</a></li></ul>
-          <ul><li><a href="#" title="Contact us">Contact us</a></li></ul>
-          <ul><li><a href="#" title="Shipping">Shipping</a></li></ul>
-          <ul><li><a href="#" title="Returns">Returns</a></li></ul>
-          <ul><li><a href="#" title="Carrers">Link</a></li></ul>
-        </nav>
-        <ul class="mp-social">
-          <li><a href="#" title="Facebook">Facebook</a></li>
-          <li><a href="#" title="Twitter">Twitter</a></li>
-          <li><a href="#" title="Pinterest">Pinterest</a></li>
-          <li><a href="#" title="Tumblr">Tumblr</a></li>
-          <li><a href="#" title="Google +">Google +</a></li>
-        </ul>
-        <span>© 2015 Merlin's Potions. All Rights Reserved</span>
+  <!-- FOOTER -->
+  <footer>
+    <div class="col-md-6">
+      <nav clas="mp-menu-footer">
+        <ul><li><a href="#" title="Company">Company</a></li></ul>
+        <ul><li><a href="#" title="Contact us">Contact us</a></li></ul>
+        <ul><li><a href="#" title="Shipping">Shipping</a></li></ul>
+        <ul><li><a href="#" title="Returns">Returns</a></li></ul>
+        <ul><li><a href="#" title="Carrers">Link</a></li></ul>
+      </nav>
+      <ul class="mp-social">
+        <li><a href="#" title="Facebook">Facebook</a></li>
+        <li><a href="#" title="Twitter">Twitter</a></li>
+        <li><a href="#" title="Pinterest">Pinterest</a></li>
+        <li><a href="#" title="Tumblr">Tumblr</a></li>
+        <li><a href="#" title="Google +">Google +</a></li>
+      </ul>
+      <span>© 2015 Merlin's Potions. All Rights Reserved</span>
+    </div>
+    <div class="col-md-6">
+      <div class="mp-box-news">
+        <h3>Sign up for our Newsletter</h3>
+        <p>Sign up for our newsletter & get exclusive discounts!</p>
+        <form action="">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="news_email">
+          </div>
+          <div class="form-group">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
       </div>
-      <div class="col-md-6">
-        <div class="mp-box-news">
-          <h3>Sign up for our Newsletter</h3>
-          <p>Sign up for our newsletter & get exclusive discounts!</p>
-          <form action="">
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="news_email">
-            </div>
-            <div class="form-group">
-              <button type="submit">Submit</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </footer>
+    </div>
+  </footer>
 
-  </div><!-- /.container -->
+</div><!-- /.container -->
 </body>
 </html>

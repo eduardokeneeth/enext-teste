@@ -23,6 +23,13 @@ body
   -webkit-justify-content: $property
   justify-content: $property
 
+//TRANSITION
+@mixin transition($transition-properties)
+  -moz-transition: $transition-properties
+  -o-transition: $transition-properties
+  -webkit-transition: $transition-properties
+  transition: $transition-properties
+
 //
 // HEADER
 //
@@ -78,3 +85,38 @@ header
       font-weight: 700
     img
       margin-right: 10px
+
+//
+// MENU
+//
+.mp-menu
+  padding: 10px 0
+  color: #b3a8c8
+  font-size: 1.6rem
+  font-style: italic
+  background-color: $secundary-color
+  ul
+    padding-left: 0
+    margin: 0
+    overflow: hidden
+    list-style-type: none
+    li
+      float: left
+      margin-right: 15px
+      @media (max-width: 991px)
+        margin-right: 5px
+  a
+    display: inline-block
+    padding: 10px 15px
+    color: #fff
+    font-family: "Oswald"
+    text-decoration: none
+    border-radius: 5px
+    @include transition(all .2s ease)
+    &:focus, &:hover
+      background-color: #422a53
+    @media (max-width: 991px)
+      padding: 10px
+  .mp-sign
+    display: block
+    text-align: center
