@@ -20,7 +20,7 @@ function potions() {
   var output = ""
   for(i = 1; i <= numpotions; i++)
   {
-    output += '<div class="um2-box col-sm-4 col-xs-6">';
+    output += '<div class="mp-box col-sm-4 col-xs-6">';
     output += '<img src="img/products/' + jdata["potions"][i].image + '" alt="' + jdata["potions"][i].name + '" title="'+ jdata["potions"][i].name + '">';
     output += '<h3>' + jdata["potions"][i].name + ' - <span class="value"> $' + jdata["potions"][i].price +'</span></h3>';
     output += '</div>';
