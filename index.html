@@ -14,63 +14,75 @@
 
 <body>
   <!-- HEADER -->
-  <header>
+  <header id="mp-header" mobile="disabled">
     <div class="container">
       <div class="row">
         <div class="mp-flex">
-          <div class="col-lg-3 col-md-4">
-            <a class="mp-logo" href="index.html" title="Merlin's Potion">
+          <div class="col-xs-2 button-mobile">
+            <button onclick="menu_toggle()" id="menu-toggle">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </button>
+          </div>
+          <div class="mp-logo col-lg-3 col-md-4 col-sm-5 col-xs-7">
+            <a href="index.html" title="Merlin's Potion">
               <h1>Merlin's Potions - Fine potions since 1026</h1>
             </a>
           </div>
-          <div class="col-lg-5 col-md-4">
-            <form>
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-btn">
-                    <button type="submit"><img src="img/icon-search.jpg" alt=""></button>
-                  </span>
-                  <input type="text" id="pesquisa" name="pesquisa" placeholder="Search our stock">
-                </div>
+          <form class="col-lg-5 col-md-4 col-xs-7">
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-btn">
+                  <button type="submit"><img src="img/icon-search.jpg" alt=""></button>
+                </span>
+                <input type="text" id="pesquisa" name="pesquisa" placeholder="Search our stock">
               </div>
-            </form>
-          </div>
+            </div>
+          </form>
           <div class="col-md-2 mp-free">
             <span>Free shipping</span> on orders over $50
           </div>
-          <div class="col-md-2 mp-bag">
+          <div class="mp-bag col-sm-2 col-xs-3">
             <img src="img/icon-bag.jpg">
             <span>Bag: <span class="bag-qtde">1</span></span>
           </div>
         </div><!-- /.mp-flex -->
+        <div class="mp-free-mobile">
+          <div class="col-xs-12">
+            <span>Free shipping on orders over $50</span>
+          </div>
+        </div>
       </div><!-- /.row -->
     </div><!-- /.container -->
-  </header>
 
-  <!-- MENU -->
-  <div class="mp-menu">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8">
-          <nav>
-            <ul>
-              <li><a href="#" title="Potions">Potions</a></li>
-              <li><a href="#" title="Ingredients">Ingredients</a></li>
-              <li><a href="#" title="Books">Books</a></li>
-              <li><a href="#" title="Supplies">Supplies</a></li>
-              <li><a href="#" title="Charms">Charms</a></li>
-              <li><a href="#" title="Clearence!">Clearence!</a></li>
-            </ul>
-          </div>
-          <div class="col-sm-4">
-            <span class="mp-sign">
-              <a href="#" title="Sign In">Sign In</a> or <a href="#" title="Sign Up">Sign Up</a>
-            </span>
-          </div>
-        </nav>        
+    <!-- MENU -->
+    <div class="mp-menu" id="menu-dropdown" status="close">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-xs-12">
+            <nav>
+              <ul>
+                <li><a href="#" title="Potions">Potions</a></li>
+                <li><a href="#" title="Ingredients">Ingredients</a></li>
+                <li><a href="#" title="Books">Books</a></li>
+                <li><a href="#" title="Supplies">Supplies</a></li>
+                <li><a href="#" title="Charms">Charms</a></li>
+                <li><a href="#" title="Clearence!">Clearence!</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+              <span class="mp-sign">
+                <a href="#" title="Sign In">Sign In</a> or <a href="#" title="Sign Up">Sign Up</a>
+              </span>
+            </div>
+          </nav>        
+        </div>
       </div>
-    </div>
-  </div><!-- /.mp-menu -->
+    </div><!-- /.mp-menu -->
+
+  </header>
+  
 
   <!-- POTIONS -->
   <div class="mp-products">
@@ -160,6 +172,8 @@
       </div>
     </div>
   </footer>
-
+  
+  <!-- SCRIPTS -->
+  <script src="js/scripts.js"></script>
 </body>
 </html>
