@@ -35,7 +35,7 @@ function potions() {
 }
 
 /*
-** Função que exibe todos as informações disponíves no 'potions.json' e as coloca em um alerta.
+** Função que exibe todos as informações disponíves no 'potions.json' e as coloca em uma lightbox.
 */
 function infos(e) {
   var id = e.getAttribute('data-layer');
