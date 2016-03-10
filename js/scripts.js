@@ -11,3 +11,19 @@ function menu_toggle() {
     document.getElementById('mp-header').classList.add('active');
   }   
 }
+
+function potions() {
+  var strdata = JSON.stringify(data);
+  var jdata = JSON.parse(strdata);
+  var numpotions = Object.keys(jdata["potions"]).length;
+  var c = document.getElementById('potions')
+  var output = ""
+  for(i = 1; i <= numpotions; i++)
+  {
+    output += '<div class="um2-box col-sm-4 col-xs-6">';
+    output += '<img src="img/products/' + jdata["potions"][i].image + '" alt="' + jdata["potions"][i].name + '" title="'+ jdata["potions"][i].name + '">';
+    output += '<h3>' + jdata["potions"][i].name + ' - <span class="value"> $' + jdata["potions"][i].price +'</span></h3>';
+    output += '</div>';
+    c.innerHTML = output;
+  }
+}

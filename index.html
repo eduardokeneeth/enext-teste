@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body onload="potions()">
   <!-- HEADER -->
   <header id="mp-header" mobile="disabled">
     <div class="container">
@@ -70,19 +70,17 @@
                 <li><a href="#" title="Charms">Charms</a></li>
                 <li><a href="#" title="Clearence!">Clearence!</a></li>
               </ul>
-            </div>
-            <div class="col-sm-4 col-xs-12">
-              <span class="mp-sign">
-                <a href="#" title="Sign In">Sign In</a> or <a href="#" title="Sign Up">Sign Up</a>
-              </span>
-            </div>
-          </nav>        
+            </nav>        
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <span class="mp-sign">
+              <a href="#" title="Sign In">Sign In</a> or <a href="#" title="Sign Up">Sign Up</a>
+            </span>
+          </div>
         </div>
       </div>
     </div><!-- /.mp-menu -->
-
   </header>
-  
 
   <!-- POTIONS -->
   <div class="mp-products">
@@ -91,30 +89,7 @@
         <div class="col-md-12">
           <h2>Potions</h2>
         </div>
-        <div class="um2-box col-sm-4 col-xs-6">
-          <img src="img/products/aging-potion.png" alt="Aging Potion" title="Aging Potion">
-          <h3>Aging Potion - <span class="value">$29.99</span></h3>
-        </div>
-        <div class="um2-box col-sm-4 col-xs-6">
-          <img src="img/products/bulgeye-potion.png" alt="Bulgeye Potion" title="Bulgeye Potion">
-          <h3>Bulgeye Potion - <span class="value">$19.99</span></h3>
-        </div>
-        <div class="um2-box col-sm-4 col-xs-6">
-          <img src="img/products/dragon-tonic.png" alt="Dragon Tonic" title="Dragon Tonic">
-          <h3>Dragon Tonic - <span class="value">$64.99</span></h3>
-        </div>
-        <div class="um2-box col-sm-4 col-xs-6">
-          <img src="img/products/love-potion.png" alt="Love Potion" title="Love Potion">
-          <h3>Love Potion - <span class="value">$29.99</span></h3>
-        </div>
-        <div class="um2-box col-sm-4 col-xs-6">
-          <img src="img/products/polyjuice-potion.png" alt="Polyjuice Potion" title="Polyjuice Potion">
-          <h3>Polyjuice Potion - <span class="value">$99.99</span></h3>
-        </div>
-        <div class="um2-box col-sm-4 col-xs-6">
-          <img src="img/products/sleeping-draught.png" alt="Sleeping Draught" title="Sleeping Draught">
-          <h3>Sleeping Draught - <span class="value">$14.99</span></h3>
-        </div>
+        <div id="potions"></div>
       </div>
     </div>
   </div><!-- /.mp-products -->
@@ -172,8 +147,9 @@
       </div>
     </div>
   </footer>
-  
+
   <!-- SCRIPTS -->
+  <script src="js/potions.json"></script>
   <script src="js/scripts.js"></script>
 </body>
 </html>
