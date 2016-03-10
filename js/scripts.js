@@ -41,30 +41,23 @@ function infos(e) {
   var id = e.getAttribute('data-layer');
   var strdata = JSON.stringify(data);
   var jdata = JSON.parse(strdata);
-  var numpotions = Object.keys(jdata["potions"]).length;
-  var infos = 'Name: ' + jdata["potions"][id].name + '\nImage: ' + jdata["potions"][id].image + '\nPrice: ' + jdata["potions"][id].price + '\nEffect: ' + jdata["potions"][id].effect + "\nIngredients: " + jdata["potions"][id].ingredients;
-  switch (id) {
-    case '1':
-      alert(infos);
-      break;
-    case '2':
-      alert(infos);
-      break;
-    case '3':
-      alert(infos);
-      break;
-    case '4':
-      alert(infos);
-      break;
-    case '5':
-      alert(infos);
-      break;
-    case '6':
-      alert(infos);
-      break;
-    default:
-      alert('Nenhum produto encontrado.');
+
+  var modal = document.getElementById('potion-modal');
+  modal.style.display = "block";
+  var btnClose = document.getElementsByClassName("close")[0];
+  btnClose.onclick = function() {
+    modal.style.display = "none";
   }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+  }
+  var info_potion = document.getElementById('info-potion');
+  var content = "";
+
+  content += '<div class="col-md-6"><img src="img/products/' + jdata["potions"][id].image + '"></div><div class="col-md-6"><h2>' + jdata["potions"][id].name + '</h2><h2>Use/Effect</h2><p>' + jdata["potions"][id].effect + '</p><h2>Ingredients</h2><p>' + jdata["potions"][id].ingredients + '</p><h2 style="margin-bottom: 0;">Price</h2><span class="value">$' + jdata["potions"][id].price + '</span><button>Add to cart</button></div>';
+  info_potion.innerHTML = content;
 }
 
 
