@@ -137,3 +137,64 @@ header
       color: $primary-color
     img
       max-width: 80%
+
+//
+// FOOTER
+//
+footer
+  padding: 45px 0
+  background-color: #e6e6e6
+  @media (max-width: 767px)
+    text-align: center
+  .mp-menu-footer, .mp-social
+    ul
+      padding-left: 0
+      margin-top: 0
+      margin-bottom: 30px
+      list-style-type: none
+      li
+        display: inline-block
+        margin-right: 25px
+        &:last-child
+          margin-right: 0
+    a
+      color: $primary-color
+      font-size: 2.3rem
+      text-transform: uppercase
+  span
+    color: #72666e
+  .mp-box-news
+    padding: 30px 25px
+    background-color: #fff
+    border-radius: 5px
+    @media (max-width: 767px)
+      margin-bottom: 30px
+    h3
+      margin-top: 0
+      font-family: "Oswald"
+      font-style: italic
+    form
+      @include display-flex()
+      @media (max-width: 767px)
+        display: block
+      input, button
+        height: 40px
+        border-radius: 5px
+      input
+        width: 265px
+        padding: 8px
+        margin-right: 10px
+        border: 1px solid #333
+        @media (max-width: 991px)
+          width: 185px
+        @media (max-width: 767px)
+          width: 100%
+          margin-bottom: 10px
+      button
+        padding: 0 25px
+        color: #fff
+        text-transform: uppercase
+        background-color: $primary-color
+        border: none
+        @media (max-width: 767px)
+          width: 100%
