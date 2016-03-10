@@ -146,6 +146,11 @@ footer
   background-color: #e6e6e6
   @media (max-width: 767px)
     text-align: center
+  .col-sm-12
+    .mp-social
+      display: none
+      @media (max-width: 767px)
+        display: block
   .mp-menu-footer, .mp-social
     ul
       padding-left: 0
@@ -163,33 +168,34 @@ footer
       text-transform: uppercase
   span
     color: #72666e
+  .mp-menu-footer, .mp-social
+    @media (max-width: 767px)
+      display: none
   .mp-box-news
     padding: 30px 25px
     background-color: #fff
     border-radius: 5px
     @media (max-width: 767px)
       margin-bottom: 30px
+      text-align: left
     h3
       margin-top: 0
       font-family: "Oswald"
       font-style: italic
     form
       @include display-flex()
-      @media (max-width: 767px)
-        display: block
+      @include justify-content(space-between)
+      .form-group
+        &:first-child
+          width: 100%
       input, button
         height: 40px
         border-radius: 5px
       input
-        width: 265px
+        width: 95%
         padding: 8px
         margin-right: 10px
         border: 1px solid #333
-        @media (max-width: 991px)
-          width: 185px
-        @media (max-width: 767px)
-          width: 100%
-          margin-bottom: 10px
       button
         padding: 0 25px
         color: #fff
